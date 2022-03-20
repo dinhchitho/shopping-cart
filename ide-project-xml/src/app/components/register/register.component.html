@@ -1,0 +1,19 @@
+<div class="container">
+    <form [formGroup]="rfRegisterShop" (ngSubmit)="onSubmit()" appForm >
+        <div style="margin-top: 50px" class="row">
+            <div class="col">
+              Phone Number:
+              <input type="text" formControlName="phoneNumberFrom"/>
+              <br />
+              Shop Name 
+              <input type="text"
+                formControlName="NameFrom" required
+              />
+              <br />
+              <!-- <input type="file" formControlName="imageForm" (change)="onChangeFile($event)"> -->
+                <button type="submit" (click)="onRegisterShop()">Save</button>
+            </div>
+          </div>
+    </form>
+  </div>
+  

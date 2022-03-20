@@ -14,7 +14,7 @@ import javax.persistence.*;
 public class CartItems {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
-    private String cartItemId;
+    private Long cartItemId;
 
     @Column(name = "amount")
     private int Amount;
