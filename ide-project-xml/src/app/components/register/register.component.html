@@ -3,11 +3,11 @@
         <div style="margin-top: 50px" class="row">
             <div class="col">
               Phone Number:
-              <input type="text" formControlName="phoneNumberFrom"/>
+              <input type="text" formControlName="phoneNumberFrom" [(ngModel)]="registerShop.phoneNumber"/>
               <br />
               Shop Name 
               <input type="text"
-                formControlName="NameFrom" required
+                formControlName="NameFrom" required [(ngModel)]="registerShop.name"
               />
               <br />
               <!-- <input type="file" formControlName="imageForm" (change)="onChangeFile($event)"> -->

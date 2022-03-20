@@ -14,7 +14,7 @@ export class ShopService {
     return this.httpClient.post<any>(environment.registerShop, registerShop);
   }
 
-  getShopById(id): Observable<any> {
+  getShopById(id: number): Observable<any> {
     return this.httpClient.get<any>(environment.getShopById + '/' + id);
   }
 }

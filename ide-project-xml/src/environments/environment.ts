@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   registerShop: "http://localhost:8080/api/shop/register",
-  getShopById: "http://localhost:8080/api/Shop",
+  getShopById: "http://localhost:8080/api/shop/getShopId",
 };
 
 /*

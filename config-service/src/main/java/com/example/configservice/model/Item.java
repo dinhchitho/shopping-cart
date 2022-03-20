@@ -1,5 +1,7 @@
 package com.example.configservice.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 
 import javax.persistence.*;
@@ -33,6 +35,7 @@ public class Item {
 
     @ManyToOne
     @JoinColumn(name = "item_shop_id")
+    @JsonBackReference
     private Shop item_shop_id;
 
     @OneToMany(mappedBy = "ItemCartItemId",cascade = CascadeType.ALL,fetch = FetchType.LAZY)

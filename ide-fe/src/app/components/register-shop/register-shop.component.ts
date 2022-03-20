@@ -43,6 +43,7 @@ export class RegisterShopComponent implements OnInit {
       formData.append("name", this.rfRegisterShop.get('NameFrom').value);
       formData.append("phoneNumber", this.rfRegisterShop.get('phoneNumberFrom').value);
       formData.append("image", null);
+      
       // this.httpClient
       // .post('http://localhost:8080/api/Shop/register', formData, {headers})
       // .subscribe({
@@ -73,9 +74,8 @@ export class RegisterShopComponent implements OnInit {
   private initForm() {
     this.registerShop = new ShopRegisterDTO();
     this.rfRegisterShop = new FormGroup({
-      phoneNumberFrom: new FormControl(),
-      NameFrom: new FormControl(),
-      imageForm: new FormControl(),
+      phoneNumberFrom: new FormControl(this.registerShop.phoneNumber),
+      NameFrom: new FormControl(this.registerShop.name),
     })
   }
 }

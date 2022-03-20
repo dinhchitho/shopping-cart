@@ -6,11 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   { path: '', component: RegisterComponent},
   {
-    path: '',
-    children: [
-      { path: 'shop/:id', component: ShopComponent},
+     path: 'shop/:shopId', component: ShopComponent,
       
-    ]
   }
 ];
 

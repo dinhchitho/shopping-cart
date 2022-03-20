@@ -1,5 +1,7 @@
 package com.example.configservice.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 
 import javax.persistence.*;
@@ -31,10 +33,12 @@ public class Shop {
     @Column(name = "is_active")
     private boolean isActive;
 
+
     @OneToMany(mappedBy = "cart_shop_id",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private List<Carts> cartShopId = new ArrayList<>();
 
     @OneToMany(mappedBy = "item_shop_id",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @JsonManagedReference
     private List<Item> itemShopId = new ArrayList<>();
 
 }

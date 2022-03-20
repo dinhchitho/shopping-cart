@@ -1,0 +1,22 @@
+<shop>
+    <item>
+        <image>1.png</image>
+        <name>Cafe</name>
+        <price>10</price>
+    </item>
+    <item>
+        <image>2.png</image>
+        <name>MilkTea</name>
+        <price>20</price>
+    </item>
+    <item>
+        <image>3.png</image>
+        <name>Tea Plus</name>
+        <price>30</price>
+    </item>
+    <item>
+        <image>4.png</image>
+        <name>Macbook</name>
+        <price>40</price>
+    </item>
+</shop>
